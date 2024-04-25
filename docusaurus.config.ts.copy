@@ -77,6 +77,16 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'api',
+          position: 'right',
+        },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'platform',
+          position: 'right',
+        }
       ],
     },
     footer: {
@@ -127,6 +137,14 @@ const config: Config = {
           path: 'api',
           routeBasePath: 'api',
           sidebarPath: require.resolve('./sidebar-api.ts'),
+          versions: {
+            current: {
+              label: 'Current',
+              path: 'api',
+              banner: 'none',
+            },
+          },
+          onlyIncludeVersions: ['current'],
         },
       ],
       [
@@ -136,6 +154,14 @@ const config: Config = {
           path: 'platform',
           routeBasePath: 'platform',
           sidebarPath: require.resolve('./sidebar-platform.ts'),
+          versions: {
+            current: {
+              label: 'Current',
+              path: 'platform',
+              banner: 'none',
+            },
+          },
+          onlyIncludeVersions: ['current'],
         },
       ],
     ],
